@@ -1,5 +1,5 @@
 package :build_essentials do
-  apt(
+  packages = [
     "build-essential",
     "zlib1g-dev",
     "libyaml-dev", 
@@ -10,10 +10,16 @@ package :build_essentials do
     "libffi-dev",
     "checkinstall",
     "libxml2-dev",
-    "libxslt-dev",
+    "libxslt1-dev",
     "libcurl4-openssl-dev",
     "libicu-dev",
     "curl",
     "openssh-server"
-  )
+  ]
+
+  apt(packages)
+
+  verify do
+    packages.each { |name| has_apt(name) }
+  end
 end
