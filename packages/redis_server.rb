@@ -1,6 +1,6 @@
 package :redis_server do
   apt "redis-server" do
-    runner "/etc/init.d/redis-server restart"
+    post :install, "/etc/init.d/redis-server restart"
   end
 
   verify do
