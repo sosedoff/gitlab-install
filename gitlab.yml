@@ -1,6 +1,7 @@
-domain: "gitlab.mydomain.com"
-user: "git" # System user for gitlab
-
+gitlab:
+  host: "gitlab.mydomain.com"
+  user: "git"
+  
 git:
   user_name: "Gitlab"
   user_email: "gitlab@localhost"
