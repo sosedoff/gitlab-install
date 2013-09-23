@@ -1,4 +1,4 @@
-package :redis_server do
+package :redis do
   runner "add-apt-repository -y ppa:chris-lea/redis-server" do
     post :install, "apt-get update -y"
   end
