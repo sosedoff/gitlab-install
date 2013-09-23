@@ -1,0 +1,19 @@
+package :build_essentials do
+  apt(
+    "build-essential",
+    "zlib1g-dev",
+    "libyaml-dev", 
+    "libssl-dev",
+    "libgdbm-dev",
+    "libreadline-dev",
+    "libncurses5-dev",
+    "libffi-dev",
+    "checkinstall",
+    "libxml2-dev",
+    "libxslt-dev",
+    "libcurl4-openssl-dev",
+    "libicu-dev",
+    "curl",
+    "openssh-server"
+  )
+end
