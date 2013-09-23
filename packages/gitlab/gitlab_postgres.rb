@@ -8,9 +8,4 @@ package :gitlab_postgres do
   runner "sudo -u postgres psql -d template1 -c \"#{sql_create_user}\""
   runner "sudo -u postgres psql -d template1 -c \"#{sql_create_db}\""
   runner "sudo -u #{sql_user} -H psql -d #{sql_db} --list"
-
-  verify do
-    #bash "sudo -u postgres psql -tAc \"SELECT 1 FROM pg_roles WHERE rolname='#{sql_user}'\" | grep -q 1"
-    #bash "sudo -u postgres psql -l | grep #{sql_db} | wc -l"
-  end
 end
