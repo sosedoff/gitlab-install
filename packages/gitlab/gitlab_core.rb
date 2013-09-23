@@ -1,4 +1,4 @@
-package :gitlab do
+package :gitlab_core do
   repo   = "https://github.com/gitlabhq/gitlabhq.git"
   path   = "/home/git/gitlab"
   branch = "6-1-stable"
