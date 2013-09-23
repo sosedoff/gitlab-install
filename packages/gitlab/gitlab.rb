@@ -31,12 +31,6 @@ package :gitlab do
 
     # Copy the example Unicorn config
     post :install, "cd #{path} && sudo -u git -H cp config/unicorn.rb.example config/unicorn.rb"
-
-    # Configure Git global settings for git user, useful when editing via web
-    # Edit user.email according to what is set in gitlab.yml
-    post :install, "cd #{path} && sudo -u git -H git config --global user.name \"GitLab\""
-    post :install, "cd #{path} && sudo -u git -H git config --global user.email \"gitlab@localhost\""
-    post :install, "cd #{path} && sudo -u git -H git config --global core.autocrlf input"
   end
 
   verify do
