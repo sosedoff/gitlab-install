@@ -1,4 +1,8 @@
 package :redis_server do
+  runner "add-apt-repository -y ppa:chris-lea/redis-server" do
+    post :install, "apt-get update -y"
+  end
+  
   apt "redis-server" do
     post :install, "/etc/init.d/redis-server restart"
   end
