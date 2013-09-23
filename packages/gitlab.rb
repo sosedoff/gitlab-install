@@ -3,7 +3,7 @@ package :gitlab do
   path   = "/home/git/gitlab"
   branch = "6-1-stable"
 
-  runner "sudo -u git -H git clone #{url} #{path}" do
+  runner "cd /home/git && sudo -u git -H git clone #{repo} gitlab" do
     # Checkout specified branch
     post :install, "cd #{path} && sudo -u git -H git checkout #{version}"
 
@@ -44,6 +44,6 @@ package :gitlab do
     has_directory "#{path}/log"
     has_directory "#{path}/tmp"
     has_file "#{path}/config/gitlab.yml"
-    has_file "#{path}/config.unicorn.rb"
+    has_file "#{path}/config/unicorn.rb"
   end
 end

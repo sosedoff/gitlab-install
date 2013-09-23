@@ -1,0 +1,6 @@
+domain: "gitlab.mydomain.com"
+user: "git" # System user for gitlab
+
+postgresql:
+  user: "git"
+  password: "password"

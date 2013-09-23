@@ -3,5 +3,6 @@ package :gitlab_user do
 
   verify do
     has_user "git"
+    has_directory "/home/git"
   end
 end

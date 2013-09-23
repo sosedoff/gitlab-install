@@ -3,7 +3,7 @@ package :gitlab_shell do
   version = "1.7.1"
   path    = "/home/git/gitlab-shell"
 
-  runner "sudo -u git -H git clone #{repo} #{path}" do
+  runner "cd /home/git && sudo -u git -H git clone #{repo} gitlab-shell" do
     post :install, "cd #{path} && sudo -u git -H git checkout v#{version}"
     post :install, "cd #{path} && sudo -u git -H cp config.yml.example config.yml"
     post :install, "cd #{path} && sudo -u git -H ./bin/install"

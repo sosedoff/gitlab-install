@@ -1,25 +1,30 @@
 $LOAD_PATH << "."
 
-policy :gitlab, :roles => :app do
-  requires :apt_update
-  requires :build_essentials
-  requires :python_software_properties
-  requires :git
-  requires :python
-  requires :python_docutils
-  requires :redis_server
-  requires :postgresql
-  requires :postfix
-  requires :nginx
-  requires :ruby
-  requires :rubygems
-  requires :bundler
+# Require all packages
+Dir["./packages/**/*.rb"].each { |f| require(f) } 
 
-  requires :gitlab_user
-  requires :gitlab_shell
-  requires :gitlab
-  requires :gitlab_gems
-  requires :gitlab_db
+policy :gitlab, :roles => :app do
+  #requires :apt_update
+  #requires :build_essentials
+  #requires :python_software_properties
+  #requires :git
+  #requires :python
+  #requires :python_docutils
+  #requires :redis_server
+  #requires :postgresql
+  #requires :postfix
+  #requires :nginx
+  #requires :ruby
+  #requires :rubygems
+  #requires :bundler
+  
+  #requires :gitlab_user
+  #requires :gitlab_postgres
+
+  #requires :gitlab_shell
+  #requires :gitlab
+  #requires :gitlab_gems
+  #requires :gitlab_db
   requires :gitlab_setup
 end
 
