@@ -22,6 +22,7 @@ policy :gitlab, :roles => :app do
   requires :gitlab_postgres
   requires :gitlab_shell
   requires :gitlab
+  requires :gitlab_git
   requires :gitlab_gems
   requires :gitlab_db
   requires :gitlab_setup
