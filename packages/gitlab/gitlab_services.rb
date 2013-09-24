@@ -1,4 +1,5 @@
 package :gitlab_services do
+  runner "cd /home/git/gitlab && sudo -u git -H bundle exec rake gitlab:check RAILS_ENV=production"
   runner "/etc/init.d/gitlab start"
 
   verify do
