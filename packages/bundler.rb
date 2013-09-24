@@ -1,7 +1,7 @@
 package :bundler do
-  runner "gem install bundler --version 1.3.5"
+  gem "bundler", version: "1.3.5"
 
   verify do
-    has_executable_with_version "bundle", "1.3.5"
+    has_gem "bundler", "1.3.5"
   end
 end
