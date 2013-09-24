@@ -1,8 +1,7 @@
 # Gitlab Install
 
-Sprinkle cookbooks to provision Gitlab server.
-
-*This is not ready yet*
+Sprinkle cookbooks to provision Gitlab server. Based on original Gitlab
+installation instructions.
 
 ## Install
 
@@ -14,10 +13,16 @@ cd gitlab-install
 bundle install
 ```
 
+Make sure you're running sprinkle >= 0.7.6.1:
+
+```
+sprinkle --version
+```
+
 ## Usage
 
-Make sure you have a clean server. Cookbooks were only tested on clean Ubuntu 13.04
-64-bit instance.
+You should have an absolutely clean server. 
+Cookbooks are only tests on 64-bit Ubuntu 13.04. 
 
 Define target server:
 
@@ -32,3 +37,5 @@ Then execute:
 ```
 sprinkle -s ./gitlab.rb
 ```
+
+You can also add some debug information with `-v` flag.
