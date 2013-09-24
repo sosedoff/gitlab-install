@@ -105,6 +105,11 @@ Install usually takes ~15 minutes. You should see the output like this:
 If there were no errors during installation, open browser with your server domain
 or ip address. Login with default user: `admin@local.host / 5iveL!fe`
 
+## TODO
+
+- YAML-based configuration
+- Postfix setup
+
 ## Contact
 
 - Dan Sosedoff
