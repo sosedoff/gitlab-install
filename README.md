@@ -3,6 +3,8 @@
 Sprinkle cookbooks to provision Gitlab server. Based on original Gitlab
 installation instructions.
 
+*Work in progress*
+
 ## Install
 
 Clone repository and install dependencies:
