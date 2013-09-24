@@ -6,6 +6,6 @@ package :gitlab_db do
   end
 
   verify do
-    has_file "/home/git/gitlab/config/database.yml"
+    has_file "#{path}/config/database.yml"
   end
 end
