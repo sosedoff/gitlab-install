@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem "sprinkle"
+gem "sprinkle", "0.7.6.1"
 gem "hashr"

@@ -1,6 +1,6 @@
 package :gitlab do
   requires :gitlab_user
-  #requires :gitlab_postgres
+  requires :gitlab_postgres
   #requires :gitlab_shell
   #requires :gitlab_core
   #requires :gitlab_git
