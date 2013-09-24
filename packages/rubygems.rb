@@ -6,6 +6,7 @@ package :rubygems do
   runner "wget #{url}" do
     post :install, "tar -zxf #{file}"
     post :install, "cd rubygems-#{version} && ruby setup.rb"
+    post :install, "rm -rf ~/rubygems-*"
   end
 
   verify do
