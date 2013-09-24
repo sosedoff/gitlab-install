@@ -10,22 +10,13 @@ policy :gitlab, :roles => :app do
   requires :git
   requires :python
   requires :python_docutils
-  requires :redis_server
+  requires :redis
   requires :postgresql
-  requires :postfix
   requires :nginx
   requires :ruby
   requires :rubygems
   requires :bundler
-  
-  requires :gitlab_user
-  requires :gitlab_postgres
-  requires :gitlab_shell
-  requires :gitlab_core
-  requires :gitlab_git
-  requires :gitlab_gems
-  requires :gitlab_db
-  requires :gitlab_setup
+  requires :gitlab
 end
 
 deployment do
