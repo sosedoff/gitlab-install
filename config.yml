@@ -15,6 +15,7 @@ git:
 postgresql:
   user: "git"
   password: "password"
+  database: "gitlabhq_production"
 
 packages:
   - "apt_update"

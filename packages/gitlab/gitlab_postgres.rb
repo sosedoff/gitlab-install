@@ -1,7 +1,8 @@
 package :gitlab_postgres do
-  pg_user     = "git"
-  pg_database = "gitlabhq_production"
-  pg_password = "password"
+  pg_user     = $config.postgresql.user
+  pg_password = $config.postgresql.password
+  pg_database = $config.postgresql.database
+
   create_user = "CREATE USER #{pg_user} WITH PASSWORD '$#{pg_password}';"
   create_db   = "CREATE DATABASE #{pg_database} OWNER #{pg_user};"
 
