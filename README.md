@@ -35,18 +35,10 @@ sprinkle --version
 You should have an absolutely clean server. 
 Cookbooks are only tests on 64-bit Ubuntu 13.04. 
 
-Define target server:
+Edit `config.yml` and then execute:
 
 ```
-export TARGET_HOST=gitlab.mydomain.com
-export TARGET_USER=root
-export TARGET_PASSWORD=mypassword
-```
-
-Then execute:
-
-```
-sprinkle -s ./gitlab.rb
+sprinkle -s ./setup.rb
 ```
 
 You can also add some debug information with `-v` flag.
@@ -107,7 +99,6 @@ or ip address. Login with default user: `admin@local.host / 5iveL!fe`
 
 ## TODO
 
-- YAML-based configuration
 - Postfix setup
 
 ## Contact
