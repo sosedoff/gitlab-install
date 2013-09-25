@@ -1,3 +1,8 @@
+target:
+  host: "myhost.com"
+  user: "root"
+  password: "mypassword"
+
 gitlab:
   host: "gitlab.mydomain.com"
   user: "git"
