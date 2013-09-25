@@ -1,29 +1,23 @@
 $LOAD_PATH << "."
 
-# Require all packages
-Dir["./packages/**/*.rb"].each { |f| require(f) } 
+require "yaml"
+require "hashr"
+
+# Load all packages
+Dir["./packages/**/*.rb"].each { |f| require(f) }
+
+# Load config
+$config = Hashr.new(YAML.load_file("./config.yml"))
 
 policy :gitlab, :roles => :app do
-  requires :apt_update
-  requires :build_essentials
-  requires :python_software_properties
-  requires :git
-  requires :python
-  requires :python_docutils
-  requires :redis
-  requires :postgresql
-  requires :nginx
-  requires :ruby
-  requires :rubygems
-  requires :bundler
-  requires :gitlab
+  $config.packages.each { |name| requires(name) }
 end
 
 deployment do
   delivery :ssh do
-    user       ENV['TARGET_USER']
-    password   ENV['TARGET_PASSWORD']
-    role :app, ENV['TARGET_HOST']
+    user       $config.target.user
+    password   $config.target.password
+    role :app, $config.target.host
   end
 
   source do

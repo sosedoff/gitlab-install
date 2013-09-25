@@ -15,3 +15,18 @@ git:
 postgresql:
   user: "git"
   password: "password"
+
+packages:
+  - "apt_update"
+  - "build_essentials"
+  - "python_software_properties"
+  - "git"
+  - "python"
+  - "python_docutils"
+  - "redis"
+  - "postgresql"
+  - "nginx"
+  - "ruby"
+  - "rubygems"
+  - "bundler"
+  - "gitlab"
