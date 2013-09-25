@@ -10,7 +10,6 @@ gitlab:
 git:
   user_name: "Gitlab"
   user_email: "gitlab@localhost"
-  core_autocrlf: "input"
 
 postgresql:
   user: "git"
