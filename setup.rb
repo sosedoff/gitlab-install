@@ -3,12 +3,13 @@ $LOAD_PATH << "."
 require "yaml"
 require "hashr"
 
-# Load all packages
-Dir["./packages/**/*.rb"].each { |f| require(f) }
-
 # Load config
 $config = Hashr.new(YAML.load_file("./config.yml"))
 
+# Load all packages
+Dir["./packages/**/*.rb"].each { |f| require(f) }
+
+# Build policy
 policy :gitlab, :roles => :app do
   $config.packages.each { |name| requires(name) }
 end
