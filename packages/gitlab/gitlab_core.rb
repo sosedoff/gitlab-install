@@ -5,7 +5,7 @@ package :gitlab_core do
 
   runner "cd /home/git && sudo -u git -H git clone #{repo} gitlab" do
     # Checkout specified branch
-    post :install, "cd #{path} && sudo -u git -H git checkout #{version}"
+    post :install, "cd #{path} && sudo -u git -H git checkout #{branch}"
 
     # Copy the example GitLab config
     post :install, "cd #{path} && sudo -u git -H cp config/gitlab.yml.example config/gitlab.yml"
