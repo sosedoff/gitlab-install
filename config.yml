@@ -3,10 +3,6 @@ target:
   user: "root"
   password: "mypassword"
 
-gitlab:
-  host: "gitlab.mydomain.com"
-  user: "git"
-  
 git:
   user_name: "Gitlab"
   user_email: "gitlab@localhost"
