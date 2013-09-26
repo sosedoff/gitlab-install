@@ -33,7 +33,7 @@ sprinkle --version
 ## Usage
 
 You should have an absolutely clean server. 
-Cookbooks are only tests on 64-bit Ubuntu 13.04. 
+Cookbooks are only tested on 64-bit Ubuntu 13.04. 
 
 Edit `config.yml` and then execute:
 
